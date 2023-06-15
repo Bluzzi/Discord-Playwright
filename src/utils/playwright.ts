@@ -3,7 +3,6 @@ import { env } from "#/utils/env";
 
 export const startChrome = async(): Promise<Page> => {
   const browser = await chromium.launch({
-    channel: "chrome",
     headless: false
   });
   const context = await browser.newContext();
