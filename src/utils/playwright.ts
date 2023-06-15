@@ -26,5 +26,5 @@ export const loginDiscord = async(page: Page): Promise<void> => {
     }, 2500);
   }, env.DISCORD_TOKEN);
 
-  await page.waitForURL("https://discord.com/app")
+  await page.waitForURL("https://discord.com/app");
 };
