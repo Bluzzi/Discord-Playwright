@@ -9,7 +9,7 @@ const run = async(): Promise<void> => {
   const directMessages = page.getByRole("link", { name: "direct message" });
   const firstFriend = directMessages.nth(0);
 
-  await directMessages.nth(0).click();
+  await firstFriend.click();
 
   // Get username of the first friend:
   const username = await firstFriend.textContent();
