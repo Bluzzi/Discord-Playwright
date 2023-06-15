@@ -17,6 +17,7 @@ export const loginDiscord = async(page: Page): Promise<void> => {
 
   await page.evaluate(token => {
     setInterval(() => {
+      // HACK: this does not work with `localStorage.setItem()` function
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       document.body.appendChild(document.createElement("iframe")).contentWindow!.localStorage.token = `"${token}"`;
     }, 50);
