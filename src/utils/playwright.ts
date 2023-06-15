@@ -25,4 +25,6 @@ export const loginDiscord = async(page: Page): Promise<void> => {
       location.reload();
     }, 2500);
   }, env.DISCORD_TOKEN);
+
+  await page.waitForURL("https://discord.com/app")
 };
